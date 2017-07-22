@@ -1,0 +1,90 @@
+{
+  "champion": {
+    "name": "杜昊燃",
+    "illustration": "https://p3.pstatp.com/large/2ed90001a869f900085c"
+  },
+  "playerList": [
+    {
+      "name": "杜昊燃",
+      "score": "冠军"
+    },
+    {
+      "name": "龚航",
+      "score": "亚军"
+    },
+    {
+      "name": "孙健",
+      "score": "4强"
+    },
+    {
+      "name": "王向阳",
+      "score": "4强"
+    },
+    {
+      "name": "魏正平",
+      "score": "8强"
+    },
+    {
+      "name": "王喜召",
+      "score": "8强"
+    },
+    {
+      "name": "马冉",
+      "score": "8强"
+    },
+    {
+      "name": "彭曲",
+      "score": "8强"
+    },
+    {
+      "name": "熊孜",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "李化",
+      "score": "16强"
+    },
+    {
+      "name": "吕兢",
+      "score": "16强"
+    },
+    {
+      "name": "杨凯",
+      "score": "16强"
+    },
+    {
+      "name": "赵强",
+      "score": "16强"
+    },
+    {
+      "name": "吴伟",
+      "score": "16强"
+    },
+    {
+      "name": "周清华",
+      "score": "16强"
+    },
+    {
+      "name": "王静怡",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "何志鹏",
+      "score": "资格赛"
+    },
+    {
+      "name": "渠慧帆",
+      "score": "资格赛"
+    },
+    {
+      "name": "周清华",
+      "score": "资格赛"
+    },
+    {
+      "name": "盛宜伟",
+      "score": "资格赛"
+    }
+  ]
+}

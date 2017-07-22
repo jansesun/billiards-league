@@ -1,0 +1,133 @@
+doctype html
+html(lang="en")
+  head
+    title 台球月赛
+    meta(name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1")
+    link(rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    style.
+      .container {
+        max-width: 960px;
+      }
+      .chart-container {
+        margin: 0 auto;
+        width: 600px;
+        height: 400px;
+      }
+      .img-responsive {
+        margin: 0 auto;
+      }
+      th:nth-child(n+2), td:nth-child(n+2) {
+        text-align: center;
+      }
+      @media (max-width: 480px) {
+        .chart-container {
+          margin: 0 auto;
+          width: 300px;
+          height: 200px;
+        }
+        th:nth-child(n+4), td:nth-child(n+4) {
+          display: none;
+        }
+        th:last-child, td:last-child {
+          display: table-cell;
+        }
+      }
+  body
+    .container
+      .panel.panel-default
+        .panel-heading 冠军风采
+        each champion,index in championList
+          img.img-responsive(src=`${champion.illustration}`)
+          p.text-center(style="margin-top:10px") #{months[index]}月赛冠军--#{champion.name}
+      .panel.panel-default
+        .panel-heading 数据统计
+        .panel-body 累计参赛人数 #{totalNum} 累计参赛人次 #{partcipantNum}
+        #participant.chart-container
+        #participant-num.chart-container
+        #personal-best.chart-container
+      .panel.panel-default
+        .panel-heading 个人参赛情况
+        table.table.table-striped
+          thead
+            tr
+              th 姓名
+              th PB
+              th 积分
+              each month in months
+                th #{month}
+              th times
+          tbody
+            each player in playerList
+              tr
+                td #{player.name}
+                td #{player.personalBest}
+                td #{player.points}
+                each score in player.scoreList
+                  td #{score || ''}
+                td #{player.partcipantNum}
+    if isDebug
+      script(src="../js/echarts.min.js")
+    else
+      script(src="../../js/lib/echarts.min.js")
+    script.
+      var participantChart = echarts.init(document.getElementById('participant'));
+      var participantNumChart = echarts.init(document.getElementById('participant-num'));
+      var personalBestChart = echarts.init(document.getElementById('personal-best'));
+      participantChart.setOption({
+        title: {
+          text: '历届参赛人数'
+        },
+        legend: {
+          x: 'right',
+          data: ['男生', '女生']
+        },
+        yAxis: {},
+        xAxis: {
+          data: !{monthsJson}
+        },
+        series: [
+          {
+            name: '男生',
+            type: 'bar',
+            stack: '性别',
+            data: !{boyNumList}
+          },
+          {
+            name: '女生',
+            type: 'bar',
+            stack: '性别',
+            data: !{girlNumList}
+          }
+        ]
+      });
+      participantNumChart.setOption({
+        title: {
+          text: '参赛人数分布'
+        },
+        xAxis: {
+          data: !{participantTimes}
+        },
+        yAxis: {},
+        series: [
+          {
+            type: 'bar',
+            data: !{participantCount}
+          }
+        ]
+      });
+      personalBestChart.setOption({
+        title: {
+          text: '个人最好成绩分布'
+        },
+        xAxis: {
+          data: !{scoreList}
+        },
+        yAxis: {},
+        series: [
+          {
+            type: 'bar',
+            data: !{personalBestCount}
+          }
+        ]
+      });
+

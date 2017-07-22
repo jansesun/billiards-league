@@ -1,0 +1,62 @@
+{
+  "champion": {
+    "name": "李化",
+    "illustration": "https://p3.pstatp.com/large/31bc0000d1a3ddd39aa6"
+  },
+  "playerList": [
+    {
+      "name": "李化",
+      "score": "冠军"
+    },
+    {
+      "name": "孙健",
+      "score": "亚军"
+    },
+    {
+      "name": "马冉",
+      "score": "4强"
+    },
+    {
+      "name": "吕兢",
+      "score": "4强"
+    },
+    {
+      "name": "付瑶",
+      "score": "8强",
+      "gender": 1
+    },
+    {
+      "name": "王向阳",
+      "score": "8强"
+    },
+    {
+      "name": "王喜召",
+      "score": "8强"
+    },
+    {
+      "name": "熊孜",
+      "score": "8强",
+      "gender": 1
+    },
+    {
+      "name": "吴伟",
+      "score": "16强"
+    },
+    {
+      "name": "杨凯",
+      "score": "16强"
+    },
+    {
+      "name": "龚航",
+      "score": "16强"
+    },
+    {
+      "name": "彭曲",
+      "score": "16强"
+    },
+    {
+      "name": "王晓建",
+      "score": "16强"
+    }
+  ]
+}

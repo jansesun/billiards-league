@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "plugins": [
+    // plugins for react server render
+    "transform-es2015-modules-commonjs", // transforms other module system to commonjs
+    ["import", {"libraryName": "antd", "style": true}], // import special for antd
+    "babel-plugin-add-module-exports", // transforms exports to module.exports
+    "transform-object-rest-spread"
+  ]
+}

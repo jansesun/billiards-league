@@ -1,0 +1,125 @@
+{
+  "champion": {
+    "name": "孙健",
+    "illustration": "https://p3.pstatp.com/large/2ee000018e1529e479ca"
+  },
+  "playerList": [
+    {
+      "name": "孙健",
+      "score": "冠军"
+    },
+    {
+      "name": "杨帆",
+      "score": "亚军"
+    },
+    {
+      "name": "杜昊燃",
+      "score": "4强"
+    },
+    {
+      "name": "曾超宇",
+      "score": "4强"
+    },
+    {
+      "name": "马冉",
+      "score": "8强"
+    },
+    {
+      "name": "余俊杰",
+      "score": "8强"
+    },
+    {
+      "name": "杨凯",
+      "score": "8强"
+    },
+    {
+      "name": "王静怡",
+      "score": "8强",
+      "gender": 1
+    },
+    {
+      "name": "张雷",
+      "score": "16强"
+    },
+    {
+      "name": "李化",
+      "score": "16强"
+    },
+    {
+      "name": "赵强",
+      "score": "16强"
+    },
+    {
+      "name": "姜亚夏",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "郑洪森",
+      "score": "16强"
+    },
+    {
+      "name": "李林涛",
+      "score": "16强"
+    },
+    {
+      "name": "胡盛昌",
+      "score": "16强"
+    },
+    {
+      "name": "程紫光",
+      "score": "16强"
+    },
+    {
+      "name": "龚航",
+      "score": "资格赛"
+    },
+    {
+      "name": "吕兢",
+      "score": "资格赛"
+    },
+    {
+      "name": "周清华",
+      "score": "资格赛"
+    },
+    {
+      "name": "熊孜",
+      "score": "资格赛",
+      "gender": 1
+    },
+    {
+      "name": "刘婧璐",
+      "score": "资格赛",
+      "gender": 1
+    },
+    {
+      "name": "王向阳",
+      "score": "资格赛"
+    },
+    {
+      "name": "张宇",
+      "score": "资格赛"
+    },
+    {
+      "name": "王晓健",
+      "score": "资格赛"
+    },
+    {
+      "name": "李伍保",
+      "score": "资格赛"
+    },
+    {
+      "name": "王剑",
+      "score": "资格赛"
+    },
+    {
+      "name": "李宇杰",
+      "score": "资格赛",
+      "gender": 1
+    },
+    {
+      "name": "常龙",
+      "score": "资格赛"
+    }
+  ]
+}

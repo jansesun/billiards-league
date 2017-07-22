@@ -1,0 +1,111 @@
+{
+  "champion": {
+    "name": "龚航",
+    "illustration": "https://p3.pstatp.com/large/2edf00019af52b0be54a"
+  },
+  "playerList": [
+    {
+      "name": "龚航",
+      "score": "冠军"
+    },
+    {
+      "name": "李林涛",
+      "score": "亚军"
+    },
+    {
+      "name": "王迪",
+      "score": "4强"
+    },
+    {
+      "name": "孙健",
+      "score": "4强"
+    },
+    {
+      "name": "周清华",
+      "score": "8强"
+    },
+    {
+      "name": "赵强",
+      "score": "8强"
+    },
+    {
+      "name": "曾超宇",
+      "score": "8强"
+    },
+    {
+      "name": "余俊杰",
+      "score": "8强"
+    },
+    {
+      "name": "程紫光",
+      "score": "16强"
+    },
+    {
+      "name": "付瑶",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "郭柄男",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "汪鹭",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "徐凡",
+      "score": "16强"
+    },
+    {
+      "name": "胡盛昌",
+      "score": "16强"
+    },
+    {
+      "name": "杨凯",
+      "score": "16强"
+    },
+    {
+      "name": "常龙",
+      "score": "16强"
+    },
+    {
+      "name": "杨帆",
+      "score": "资格赛"
+    },
+    {
+      "name": "渠慧帆",
+      "score": "资格赛"
+    },
+    {
+      "name": "彭曲",
+      "score": "资格赛"
+    },
+    {
+      "name": "王向阳",
+      "score": "资格赛"
+    },
+    {
+      "name": "葛江华",
+      "score": "资格赛"
+    },
+    {
+      "name": "马冉",
+      "score": "资格赛"
+    },
+    {
+      "name": "高鹏",
+      "score": "资格赛"
+    },
+    {
+      "name": "何志鹏",
+      "score": "资格赛"
+    },
+    {
+      "name": "吕兢",
+      "score": "资格赛"
+    }
+  ]
+}
