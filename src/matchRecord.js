@@ -29,7 +29,7 @@ list.forEach(records => {
 if(results[playerA]) {
   if(!playerB) {
       console.log(`${playerA}的对战记录为:`);
-      console.log(result[playerA]);
+      console.log(results[playerA]);
   } else {
     const result = results[playerA][playerB];
     if(result) {
