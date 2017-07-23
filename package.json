@@ -27,6 +27,7 @@
     "pug": "^2.0.0-rc.2"
   },
   "dependencies": {
-    "console.table": "^0.8.0"
+    "console.table": "^0.8.0",
+    "minimist": "^1.2.0"
   }
 }

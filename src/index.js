@@ -1,11 +1,8 @@
 require('console.table');
 const pug = require('pug');
 const path = require('path');
-var fs = require('fs');
-const months = [
-  '2017.1', '2017.2', '2017.3', '2017.4', '2017.5', '2017.6',
-  '2017.7'
-];
+const fs = require('fs');
+const months = require('../data/months.json');
 const scoreWeight = {
   '冠军': 8,
   '亚军': 6,
@@ -14,7 +11,7 @@ const scoreWeight = {
   '16强': 1,
   '资格赛': 0
 };
-const list = months.map(fileName => require(`../data/${fileName}.json`));
+const list = months.map(fileName => require(`../data/leagueInfo/${fileName}.json`));
 const formatMonths = months.map(month => `${month.replace('.', '年')}月`);
 const championList = list.map((item, index) => ({
   ...item.champion,
@@ -73,6 +70,9 @@ console.log('====个人记录====');
 const sortedPlayerList = [...playerInfo.values()];
 sortedPlayerList.sort((a, b) => {
   if(scoreWeight[b.personalBest] === scoreWeight[a.personalBest]) {
+    if(b.points === a.points) {
+      return b.partcipantNum - a.partcipantNum;
+    }
     return b.points - a.points;
   }
   return scoreWeight[b.personalBest] - scoreWeight[a.personalBest];
