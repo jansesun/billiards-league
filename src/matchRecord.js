@@ -36,7 +36,11 @@ if(results[playerA]) {
       const matchCount = result.winCount + result.loseCount;
       console.log(`${playerA}与${playerB}历史交锋${matchCount}次, 胜率${~~(result.winCount * 1000 / matchCount) / 10}%`);
     } else {
-      console.log(`${playerA}与${playerB}尚未有过交手记录`);
+      if(results[playerB]) {
+        console.log(`${playerA}与${playerB}尚未有过交手记录`);
+      } else {
+        console.log(`${playerB}尚未参加过比赛`);
+      }
     }
   }
 } else {
