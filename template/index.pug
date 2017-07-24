@@ -57,7 +57,7 @@ html(lang="en")
                 th #{month}
               th times
           tbody
-            each player in playerList
+            each player,index in playerList
               tr
                 td #{player.name}
                 td #{player.personalBest}
@@ -65,10 +65,7 @@ html(lang="en")
                 each score in player.scoreList
                   td #{score || ''}
                 td #{player.partcipantNum}
-    if isDebug
-      script(src="../js/echarts.min.js")
-    else
-      script(src="../../js/lib/echarts.min.js")
+    script(src="../js/echarts.min.js")
     script.
       var participantChart = echarts.init(document.getElementById('participant'));
       var participantNumChart = echarts.init(document.getElementById('participant-num'));

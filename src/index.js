@@ -37,7 +37,7 @@ console.log('====累计参与人次====');
 console.log(totalNum);
 
 const playerInfo = new Map();
-
+let id = 0;
 list.forEach((item, index) => {
   const { playerList } = item;
   playerList.forEach(player => {
@@ -53,7 +53,9 @@ list.forEach((item, index) => {
     } else {
       const scoreList = Array(months.length);
       scoreList[index] = player.score;
+      id++;
       info = {
+        id,
         name: player.name,
         personalBest: player.score,
         points: scoreWeight[player.score],

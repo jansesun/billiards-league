@@ -4,7 +4,6 @@
   "description": "Statistics about billiards league",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production babel-node src/index.js && cp page/index.html ../jansesun.github.io/demo/billiards-statistic/",
     "start": "NODE_ENV=development babel-node src/index.js"
   },
   "repository": {
