@@ -91,11 +91,13 @@ console.log('====个人最好成绩分布====');
 console.log(personalBestCount);
 console.log('====参与次数分布====');
 console.log(participantCount);
-const renderFunction = pug.compileFile(path.join(__dirname, '../template/index.pug'), {
+const isDebug = process.env.NODE_ENV !== 'production';
+const fileName = isDebug ? 'index' : 'wiki';
+const renderFunction = pug.compileFile(path.join(__dirname, `../template/${fileName}.pug`), {
   pretty: '  '
 });
-const html = renderFunction({
-  isDebug: process.env.NODE_ENV !== 'production',
+const html = isDebug ? renderFunction({
+  isDebug,
   championList,
   months: formatMonths,
   monthsJson: JSON.stringify(months),
@@ -108,7 +110,28 @@ const html = renderFunction({
   personalBestCount: JSON.stringify(Object.values(personalBestCount)),
   scoreList: JSON.stringify(Object.keys(personalBestCount)),
   playerList: sortedPlayerList
+}) : renderFunction({
+  isDebug,
+  championList,
+  months: formatMonths,
+  monthsJson: months,
+  partcipantNum: playerInfo.size,
+  totalNum,
+  girlNumList,
+  boyNumList,
+  participantCount,
+  participantTimes: participantCount.map((item, index) => months.length - index),
+  personalBestCount:Object.values(personalBestCount),
+  scoreList: Object.keys(personalBestCount).map(score => ({
+    '冠军': 'Champion',
+    '亚军': 'Secord',
+    '4强': 'Top 4',
+    '8强': 'Top 8',
+    '16强': 'Top 16',
+    '资格赛': 'Qualification'
+  })[score]),
+  playerList: sortedPlayerList
 });
-fs.writeFileSync(path.join(__dirname, '../page/index.html'), html);
+fs.writeFileSync(path.join(__dirname, `../page/${fileName}.html`), html);
 
 
