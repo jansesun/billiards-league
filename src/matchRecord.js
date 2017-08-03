@@ -26,23 +26,27 @@ list.forEach(records => {
     results[loser] = loserRecord;
   });
 });
-if(results[playerA]) {
-  if(!playerB) {
-      console.log(`${playerA}的对战记录为:`);
-      console.log(results[playerA]);
-  } else {
-    const result = results[playerA][playerB];
-    if(result) {
-      const matchCount = result.winCount + result.loseCount;
-      console.log(`${playerA}与${playerB}历史交锋${matchCount}次, 胜率${~~(result.winCount * 1000 / matchCount) / 10}%`);
+if(playerA) {
+  if(results[playerA]) {
+    if(!playerB) {
+        console.log(`${playerA}的对战记录为:`);
+        console.log(results[playerA]);
     } else {
-      if(results[playerB]) {
-        console.log(`${playerA}与${playerB}尚未有过交手记录`);
+      const result = results[playerA][playerB];
+      if(result) {
+        const matchCount = result.winCount + result.loseCount;
+        console.log(`${playerA}与${playerB}历史交锋${matchCount}次, 胜率${~~(result.winCount * 1000 / matchCount) / 10}%`);
       } else {
-        console.log(`${playerB}尚未参加过比赛`);
+        if(results[playerB]) {
+          console.log(`${playerA}与${playerB}尚未有过交手记录`);
+        } else {
+          console.log(`${playerB}尚未参加过比赛`);
+        }
       }
     }
+  } else {
+    console.log(`${playerA}尚未参加过比赛`);
   }
 } else {
-  console.log(`${playerA}尚未参加过比赛`);
+  console.log(results);
 }

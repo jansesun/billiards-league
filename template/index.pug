@@ -55,7 +55,8 @@ html(lang="en")
               th 积分
               each month in months
                 th #{month}
-              th times
+              th 参赛次数
+              th 夺冠次数
           tbody
             each player,index in playerList
               tr
@@ -65,6 +66,7 @@ html(lang="en")
                 each score in player.scoreList
                   td #{score || ''}
                 td #{player.partcipantNum}
+                td #{player.championNum || ''}
     script(src="../js/echarts.min.js")
     script.
       var participantChart = echarts.init(document.getElementById('participant'));

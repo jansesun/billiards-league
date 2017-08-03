@@ -86,7 +86,7 @@ ac:layout-section(ac:type="single")
     h1 个人参赛情况
     table.wrapped
       colgroup
-        - len = months.length + 4
+        - len = months.length + 5
         while len >= 0
           col
           - len--;
@@ -98,7 +98,8 @@ ac:layout-section(ac:type="single")
           th(style="text-align:center;") 积分
           each month in months
             th(style="text-align:center;") #{month}
-          th(style="text-align:center;") times
+          th(style="text-align:center;") 参赛次数
+          th(style="text-align:center;") 夺冠次数
       tbody
          each player,index in playerList
             tr
@@ -109,5 +110,6 @@ ac:layout-section(ac:type="single")
               each score in player.scoreList
                 td(style="text-align:center;") #{score || ''}
               td(style="text-align:center;") #{player.partcipantNum}
+              td(style="text-align:center;") #{player.championNum || ''}
 
 

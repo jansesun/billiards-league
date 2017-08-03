@@ -46,6 +46,9 @@ list.forEach((item, index) => {
       info = playerInfo.get(player.name);
       info.partcipantNum++;
       info.points += scoreWeight[player.score];
+      if(player.score === '冠军') {
+        info.championNum++;
+      }
       if(scoreWeight[player.score] > scoreWeight[info.personalBest]) {
         info.personalBest = player.score;
       }
@@ -60,7 +63,8 @@ list.forEach((item, index) => {
         personalBest: player.score,
         points: scoreWeight[player.score],
         scoreList,
-        partcipantNum: 1
+        partcipantNum: 1,
+        championNum: player.score === '冠军' ? 1 : 0
       };
     }
     playerInfo.set(player.name, info);
@@ -81,11 +85,11 @@ sortedPlayerList.sort((a, b) => {
 });
 console.table(sortedPlayerList);
 const personalBestCount = {};
-const participantCount = [];
+const participantCount = Array.from({length: months.length}).fill(0);
 sortedPlayerList.forEach(player => {
   const index = months.length - player.partcipantNum;
   personalBestCount[player.personalBest] = (personalBestCount[player.personalBest] || 0) + 1;
-  participantCount[index] = (participantCount[index] || 0) + 1;
+  participantCount[index] = participantCount[index] + 1;
 });
 console.log('====个人最好成绩分布====');
 console.log(personalBestCount);
