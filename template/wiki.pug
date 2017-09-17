@@ -86,7 +86,7 @@ ac:layout-section(ac:type="single")
     h1 个人参赛情况
     table.wrapped
       colgroup
-        - len = months.length + 5
+        - len = 6
         while len >= 0
           col
           - len--;
@@ -96,10 +96,9 @@ ac:layout-section(ac:type="single")
           th 姓名
           th(style="text-align:center;") PB
           th(style="text-align:center;") 积分
-          each month in months
-            th(style="text-align:center;") #{month}
           th(style="text-align:center;") 参赛次数
           th(style="text-align:center;") 夺冠次数
+          th(style="text-align:center;") 排名变化
       tbody
          each player,index in playerList
             tr
@@ -107,9 +106,34 @@ ac:layout-section(ac:type="single")
               td(style="text-align:center;") #{player.name}
               td(style="text-align:center;") #{player.personalBest}
               td(style="text-align:center;") #{player.points}
-              each score in player.scoreList
-                td(style="text-align:center;") #{score || ''}
               td(style="text-align:center;") #{player.partcipantNum}
               td(style="text-align:center;") #{player.championNum || ''}
-
+              td(style="text-align:center;") #{player.rankChange > 0 ? `${player.rankChange}↑` : player.rankChange < 0 ? `${-player.rankChange}↓` : '--' }
+    - var step = 6
+    - var start = 0
+    - var curMonths = months.slice(0, step)
+    - months = months.slice(step)
+    while curMonths.length > 0
+      table.wrapped
+        colgroup
+          - len = curMonths.length + 2
+          while len >= 0
+            col
+            - len--;
+        thead
+          tr
+            th.numberingColumn
+            th 姓名
+            each month in curMonths
+              th(style="text-align:center;") #{month}
+        tbody
+           each player,index in playerList
+              tr
+                td.numberingColumb #{index + 1}
+                td(style="text-align:center;") #{player.name}
+                each month, offset in curMonths
+                  td(style="text-align:center;") #{player.scoreList[start + offset] || ''}
+      - curMonths = months.slice(0, step)
+      - months = months.slice(step)
+      - start += step
 

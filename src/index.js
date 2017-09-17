@@ -40,10 +40,19 @@ const playerInfo = new Map();
 let id = 0;
 list.forEach((item, index) => {
   const { playerList } = item;
+  const isLastMonth = index === months.length - 1;
   playerList.forEach(player => {
     let info;
     if(playerInfo.has(player.name)) {
       info = playerInfo.get(player.name);
+      if(isLastMonth) {
+        info.prevInfo = {
+          id: info.id,
+          partcipantNum: info.partcipantNum,
+          points: info.points,
+          personalBest: info.personalBest
+        };
+      }
       info.partcipantNum++;
       info.points += scoreWeight[player.score];
       if(player.score === '冠军') {
@@ -66,6 +75,9 @@ list.forEach((item, index) => {
         partcipantNum: 1,
         championNum: player.score === '冠军' ? 1 : 0
       };
+      if(isLastMonth) {
+        info.isNewbee = true;
+      }
     }
     playerInfo.set(player.name, info);
   });
@@ -74,14 +86,40 @@ console.log('====累计参与人数====');
 console.log(playerInfo.size);
 console.log('====个人记录====');
 const sortedPlayerList = [...playerInfo.values()];
-sortedPlayerList.sort((a, b) => {
+const lastPlayerList = sortedPlayerList.filter(player => !player.isNewbee);
+lastPlayerList.forEach(player => {
+  if(!player.prevInfo) {
+    player.prevInfo = {
+      id: player.id,
+      partcipantNum: player.partcipantNum,
+      points: player.points,
+      personalBest: player.personalBest
+    };
+  }
+});
+const sortMethod = (a, b) => {
   if(scoreWeight[b.personalBest] === scoreWeight[a.personalBest]) {
     if(b.points === a.points) {
+      if(b.partcipantNum === a.partcipantNum) {
+        return b.id - a.id;
+      }
       return b.partcipantNum - a.partcipantNum;
     }
     return b.points - a.points;
   }
   return scoreWeight[b.personalBest] - scoreWeight[a.personalBest];
+};
+lastPlayerList.sort((a, b) => {
+  return sortMethod(a.prevInfo, b.prevInfo);
+});
+console.table(lastPlayerList);
+sortedPlayerList.sort(sortMethod);
+sortedPlayerList.forEach((player, index) => {
+  if(player.isNewbee) {
+    player.rankChange = 0;
+  } else {
+    player.rankChange = lastPlayerList.findIndex(lastPlayer => player.name === lastPlayer.name) - index;
+  }
 });
 console.table(sortedPlayerList);
 const personalBestCount = {};

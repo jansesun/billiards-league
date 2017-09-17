@@ -1,0 +1,83 @@
+{
+  "champion": {
+    "name": "王迪",
+    "illustration": "https://p3.pstatp.com/large/39ff0001ea991cd64a58"
+  },
+  "playerList": [
+    {
+      "name": "王迪",
+      "score": "冠军"
+    },
+    {
+      "name": "孙健",
+      "score": "亚军"
+    },
+    {
+      "name": "王静怡",
+      "score": "4强",
+      "gender": 1
+    },
+    {
+      "name": "李天池",
+      "score": "4强"
+    },
+    {
+      "name": "胡盛昌",
+      "score": "8强"
+    },
+    {
+      "name": "周清华",
+      "score": "8强"
+    },
+    {
+      "name": "彭曲",
+      "score": "8强"
+    },
+    {
+      "name": "刘婧璐",
+      "score": "8强",
+      "gender": 1
+    },
+    {
+      "name": "刘贵元",
+      "score": "16强"
+    },
+    {
+      "name": "王甜祎",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "王向阳",
+      "score": "16强"
+    },
+    {
+      "name": "曾超宇",
+      "score": "16强"
+    },
+    {
+      "name": "李化",
+      "score": "16强"
+    },
+    {
+      "name": "徐凡",
+      "score": "16强"
+    },
+    {
+      "name": "李林杨",
+      "score": "16强"
+    },
+    {
+      "name": "马冉",
+      "score": "16强"
+    },
+    {
+      "name": "龚航",
+      "score": "资格赛"
+    },
+    {
+      "name": "杨凯",
+      "score": "资格赛"
+    }
+  ]
+}
