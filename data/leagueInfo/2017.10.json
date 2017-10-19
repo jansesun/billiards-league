@@ -1,0 +1,60 @@
+{
+  "champion": {
+    "name": "孙健",
+    "illustration": "https://p3.pstatp.com/large/402100024e6b7859e269"
+  },
+  "playerList": [
+    {
+      "name": "孙健",
+      "score": "冠军"
+    },
+    {
+      "name": "杨凯",
+      "score": "亚军"
+    },
+    {
+      "name": "杜昊燃",
+      "score": "4强"
+    },
+    {
+      "name": "龚航",
+      "score": "4强"
+    },
+    {
+      "name": "徐凡",
+      "score": "8强"
+    },
+    {
+      "name": "王迪",
+      "score": "8强"
+    },
+    {
+      "name": "魏正平",
+      "score": "8强"
+    },
+    {
+      "name": "彭曲",
+      "score": "8强"
+    },
+    {
+      "name": "赵强",
+      "score": "16强"
+    },
+    {
+      "name": "刘贵元",
+      "score": "16强"
+    },
+    {
+      "name": "周清华",
+      "score": "16强"
+    },
+    {
+      "name": "何志鹏",
+      "score": "16强"
+    },
+    {
+      "name": "程成",
+      "score": "16强"
+    }
+  ]
+}
