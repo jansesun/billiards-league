@@ -1,0 +1,75 @@
+{
+  "champion": {
+    "name": "王迪",
+    "illustration": "https://p3.pstatp.com/large/4e6700003ccbd30bd1c6"
+  },
+  "playerList": [
+    {
+      "name": "王迪",
+      "score": "冠军"
+    },
+    {
+      "name": "彭曲",
+      "score": "亚军"
+    },
+    {
+      "name": "王剑",
+      "score": "4强"
+    },
+    {
+      "name": "田颖",
+      "score": "4强",
+      "gender": 1
+    },
+    {
+      "name": "刘贵元",
+      "score": "8强"
+    },
+    {
+      "name": "魏正平",
+      "score": "8强"
+    },
+    {
+      "name": "龚航",
+      "score": "8强"
+    },
+    {
+      "name": "王喜召",
+      "score": "8强"
+    },
+    {
+      "name": "刘妞",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "薛开元",
+      "score": "16强"
+    },
+    {
+      "name": "孙健",
+      "score": "16强"
+    },
+    {
+      "name": "杜昊燃",
+      "score": "16强"
+    },
+    {
+      "name": "历增",
+      "score": "16强"
+    },
+    {
+      "name": "薛思蕾",
+      "score": "16强",
+      "gender": 1
+    },
+    {
+      "name": "赵强",
+      "score": "16强"
+    },
+    {
+      "name": "吕兢",
+      "score": "16强"
+    }
+  ]
+}
